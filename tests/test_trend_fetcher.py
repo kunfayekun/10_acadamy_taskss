@@ -9,8 +9,10 @@ def test_trend_fetcher_api_contract():
     This test should FAIL.
     """
 
-    # Simulated response from trend agent (placeholder)
-    trend_response = None  # Agent not implemented yet
+    # Use the minimal trend_fetcher implementation
+    from skills.trend_fetcher import fetch_trend
+
+    trend_response = fetch_trend(platform="youtube", topic="example")
 
     # Assertions based on specs/technical.md
     assert isinstance(trend_response, dict)

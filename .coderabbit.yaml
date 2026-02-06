@@ -1,0 +1,28 @@
+# AI Review Policy for Project Chimera
+# This file is a local simulation/config for an AI reviewer (CodeRabbit or similar).
+
+policy:
+  name: chimera-spec-alignment
+  description: |
+    Enforce that code changes align to `specs/` documents, run tests, and check for common security issues.
+
+checks:
+  - id: specs-referenced
+    description: "PR must reference or update relevant `specs/` files when changing agent behavior"
+    severity: high
+
+  - id: run-tests
+    description: "Run the test suite and require zero failing tests unless the PR explicitly documents an intentional failing test for TDD"
+    severity: high
+
+  - id: spec-consistency
+    description: "Verify that API contracts in `specs/technical.md` are not contradicted by code changes"
+    severity: medium
+
+  - id: security-scan
+    description: "Run lightweight static checks for secrets and common vulnerabilities (recommend using bandit/safety in CI)"
+    severity: high
+
+recommendations:
+  - "If `specs/` are changed, include a short rationale referencing `srs.md` or `specs/_meta.md`."
+  - "For AI-generated code, include an explicit review checklist showing spec alignment and test coverage."
