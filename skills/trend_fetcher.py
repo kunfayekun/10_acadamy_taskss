@@ -1,6 +1,14 @@
-def fetch_trend(platform: str = "youtube", topic: str = "example") -> dict:
-    """Intentional placeholder: not implemented for TDD.
+from datetime import datetime
 
-    Raises NotImplementedError to indicate this skill must be implemented by the agent.
+
+def fetch_trend(platform: str = "youtube", topic: str = "example") -> dict:
+    """Minimal, safe stub used to allow tests to run to TDD failure points.
+
+    Returns a trend dict matching the JSON schema in `specs/technical.md`.
     """
-    raise NotImplementedError("trend_fetcher.fetch_trend is not implemented")
+    return {
+        "platform": platform,
+        "topic": topic,
+        "trend_score": 0.0,
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+    }

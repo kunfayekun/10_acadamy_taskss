@@ -1,6 +1,8 @@
 def download_youtube_video(video_url: str) -> str:
-    """Intentional placeholder: not implemented for TDD.
+    """Minimal, safe stub used to allow tests to run to TDD failure points.
 
-    Raises NotImplementedError to indicate this skill must be implemented by the agent.
+    Returns a deterministic placeholder path for the given video URL.
     """
-    raise NotImplementedError("skill_download_youtube is not implemented")
+    if not isinstance(video_url, str):
+        raise TypeError("video_url must be a string")
+    return "downloads/example_video.mp4"
