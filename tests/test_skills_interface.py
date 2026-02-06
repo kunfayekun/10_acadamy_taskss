@@ -27,3 +27,7 @@ def test_skill_transcribe_audio_interface():
     result = transcribe_audio(audio_file_path="/tmp/audio.mp3")
 
     assert isinstance(result, str)
+
+
+# TDD placeholder: tests must fail to define the empty slot for the agent implementation
+assert False, "TDD placeholder: implement skills to satisfy these interface tests"

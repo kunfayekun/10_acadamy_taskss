@@ -1,13 +1,6 @@
-from datetime import datetime
-
 def fetch_trend(platform: str = "youtube", topic: str = "example") -> dict:
-    """Return a minimal trend dict matching `specs/technical.md` contract.
+    """Intentional placeholder: not implemented for TDD.
 
-    Keys: platform, topic, trend_score, timestamp
+    Raises NotImplementedError to indicate this skill must be implemented by the agent.
     """
-    return {
-        "platform": platform,
-        "topic": topic,
-        "trend_score": 0.0,
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-    }
+    raise NotImplementedError("trend_fetcher.fetch_trend is not implemented")
