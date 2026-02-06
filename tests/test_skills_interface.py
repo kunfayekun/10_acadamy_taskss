@@ -13,6 +13,8 @@ def test_skill_download_youtube_interface():
     result = download_youtube_video(video_url="https://youtube.com/example")
 
     assert isinstance(result, str)
+    # TDD placeholder: test should fail to define the empty slot for the agent implementation
+    assert False, "TDD placeholder: implement skills to satisfy these interface tests"
 
 
 def test_skill_transcribe_audio_interface():
@@ -27,7 +29,8 @@ def test_skill_transcribe_audio_interface():
     result = transcribe_audio(audio_file_path="/tmp/audio.mp3")
 
     assert isinstance(result, str)
+    # TDD placeholder: test should fail to define the empty slot for the agent implementation
+    assert False, "TDD placeholder: implement skills to satisfy these interface tests"
 
 
-# TDD placeholder: tests must fail to define the empty slot for the agent implementation
-assert False, "TDD placeholder: implement skills to satisfy these interface tests"
+

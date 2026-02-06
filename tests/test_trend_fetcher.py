@@ -26,5 +26,5 @@ def test_trend_fetcher_api_contract():
     assert isinstance(trend_response["topic"], str)
     assert isinstance(trend_response["trend_score"], (int, float))
 
-# TDD placeholder: tests must fail to define the empty slot for the agent implementation
-assert False, "TDD placeholder: implement trend_fetcher to satisfy this test"
+    # TDD placeholder: test should fail to define the empty slot for the agent implementation
+    assert False, "TDD placeholder: implement trend_fetcher to satisfy this test"
